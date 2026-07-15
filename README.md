@@ -2,7 +2,7 @@
 
 適合橫向平板的雙人心算拔河遊戲。藍、紅兩隊各自解題，答對後依作答時間獲得 1–5 分；分差達 20 分即獲勝。
 
-GitHub Pages：https://<你的 GitHub 使用者名稱>.github.io/2026gamelearning/
+GitHub Pages：https://kirkchu.github.io/2026gamelearning/
 
 ## 本機執行
 
