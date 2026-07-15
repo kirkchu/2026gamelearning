@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#1688ed" />
+    <title>數學拔河大挑戰</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="game-shell" aria-label="雙人數學拔河遊戲">
+      <section class="team-panel team-panel--blue" aria-labelledby="blue-title">
+        <div class="team-heading"><span>★</span><h1 id="blue-title">藍隊</h1><span>★</span></div>
+        <div class="challenge-card">
+          <p class="question-label">快點算出答案！</p>
+          <output id="blue-question" class="question" aria-live="polite"></output>
+        </div>
+        <output id="blue-answer" class="answer-display" aria-label="藍隊輸入答案">0</output>
+        <p id="blue-feedback" class="feedback" aria-live="polite"></p>
+        <div id="blue-keypad" class="keypad" aria-label="藍隊數字鍵盤"></div>
+      </section>
+
+      <section class="arena" aria-label="拔河賽場">
+        <div class="arena-topline">
+          <div class="score score--blue"><span>藍隊分數</span><strong id="blue-score">0</strong></div>
+          <div class="title-lockup"><span class="sun">☀</span><p>數學拔河大挑戰</p><small>答對就把繩子拉過來！</small></div>
+          <div class="score score--red"><span>紅隊分數</span><strong id="red-score">0</strong></div>
+        </div>
+        <div class="field" id="field">
+          <div class="flag" aria-hidden="true"><i></i><b>⚑</b></div>
+          <div id="tug-line" class="tug-line" aria-label="拔河隊伍位置">
+            <div class="team-people team-people--blue"><span>👧🏻</span><span>👦🏻</span></div>
+            <div class="rope"></div>
+            <div class="team-people team-people--red"><span>👧🏽</span><span>👦🏽</span></div>
+          </div>
+        </div>
+        <p class="difference-note"><span id="lead-label">目前勢均力敵</span><span>｜先拉開 20 分就獲勝</span></p>
+      </section>
+
+      <section class="team-panel team-panel--red" aria-labelledby="red-title">
+        <div class="team-heading"><span>★</span><h1 id="red-title">紅隊</h1><span>★</span></div>
+        <div class="challenge-card">
+          <p class="question-label">快點算出答案！</p>
+          <output id="red-question" class="question" aria-live="polite"></output>
+        </div>
+        <output id="red-answer" class="answer-display" aria-label="紅隊輸入答案">0</output>
+        <p id="red-feedback" class="feedback" aria-live="polite"></p>
+        <div id="red-keypad" class="keypad" aria-label="紅隊數字鍵盤"></div>
+      </section>
+    </main>
+
+    <div id="winner-modal" class="winner-modal" hidden role="dialog" aria-modal="true" aria-labelledby="winner-title">
+      <div class="winner-card">
+        <span class="winner-stars">★ ★ ★</span>
+        <p>比賽結束！</p>
+        <h2 id="winner-title"></h2>
+        <strong id="winner-score"></strong>
+        <button id="restart" type="button">再玩一次</button>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
